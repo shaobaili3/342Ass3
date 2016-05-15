@@ -115,10 +115,8 @@ class SatelliteViewController: UIViewController {
                     self.setTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("timer"), userInfo: nil, repeats: true)
                     self.animation.stopAnimating()
                 }
-            })
-
- 
-    }
+            }) 
+        }
     }
     func timer()
     {
