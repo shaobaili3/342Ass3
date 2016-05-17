@@ -14,6 +14,7 @@
 		12D95FBD1CE9780C00EADCD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D95FBB1CE9780C00EADCD4 /* LaunchScreen.storyboard */; };
 		12D95FC81CE9780C00EADCD4 /* _42Ass3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D95FC71CE9780C00EADCD4 /* _42Ass3Tests.swift */; };
 		12D95FD31CE9780D00EADCD4 /* _42Ass3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D95FD21CE9780D00EADCD4 /* _42Ass3UITests.swift */; };
+		12D95FE11CE9B4DA00EADCD4 /* SatelliteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D95FE01CE9B4DA00EADCD4 /* SatelliteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		12D95FCE1CE9780D00EADCD4 /* 342Ass3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 342Ass3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D95FD21CE9780D00EADCD4 /* _42Ass3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _42Ass3UITests.swift; sourceTree = "<group>"; };
 		12D95FD41CE9780D00EADCD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D95FE01CE9B4DA00EADCD4 /* SatelliteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SatelliteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				12D95FB91CE9780C00EADCD4 /* Assets.xcassets */,
 				12D95FBB1CE9780C00EADCD4 /* LaunchScreen.storyboard */,
 				12D95FBE1CE9780C00EADCD4 /* Info.plist */,
+				12D95FE01CE9B4DA00EADCD4 /* SatelliteViewController.swift */,
 			);
 			path = 342Ass3;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D95FE11CE9B4DA00EADCD4 /* SatelliteViewController.swift in Sources */,
 				12D95FB51CE9780C00EADCD4 /* ViewController.swift in Sources */,
 				12D95FB31CE9780C00EADCD4 /* AppDelegate.swift in Sources */,
 			);
