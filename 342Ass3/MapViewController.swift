@@ -31,7 +31,7 @@ class MapViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         next.hidden = true
-        var longpress = UILongPressGestureRecognizer(target: self, action: "addAnnotation:")
+        let longpress = UILongPressGestureRecognizer(target: self, action: "addAnnotation:")
         longpress.minimumPressDuration = 1.5
         map.addGestureRecognizer(longpress)
         // Do any additional setup after loading the view.
