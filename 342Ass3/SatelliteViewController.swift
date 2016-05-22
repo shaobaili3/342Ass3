@@ -22,6 +22,7 @@ class SatelliteViewController: UIViewController {
     var dates = [String?](count: 5, repeatedValue: nil)
     var setTimer = NSTimer()
     var count: Int = 0
+    var invalidLocation: Bool = false
     
 
     @IBAction func back(sender: AnyObject) {
@@ -43,7 +44,7 @@ class SatelliteViewController: UIViewController {
         let request = NSMutableURLRequest(URL: url)
         
         //request.HTTPMethod = "GET"
-        request.timeoutInterval = 15
+        request.timeoutInterval = 20
         request.HTTPMethod = "GET"
         
         
@@ -67,7 +68,10 @@ class SatelliteViewController: UIViewController {
                 print(r.statusCode)
                 
                 if (r.statusCode == 200){
-                    self.fetchImage(dat, index: index)
+                    if(self.fetchImage(dat, index: index))
+                    {
+                        return
+                    }
                 }
                 
             }
@@ -78,7 +82,7 @@ class SatelliteViewController: UIViewController {
         
     }
     
-    func fetchImage(dat: NSData, index: Int)
+    func fetchImage(dat: NSData, index: Int) -> Bool
     {
         let resultString:String = NSString(data: dat, encoding:NSUTF8StringEncoding)! as String
         print(resultString)
@@ -117,6 +121,27 @@ class SatelliteViewController: UIViewController {
                 }
             }) 
         }
+        else
+        {
+            if index == 0
+            {
+                dispatch_async(dispatch_get_main_queue(), {
+            let alert: UIAlertController = UIAlertController(title: "Not a valid location!", message: "Please reselect a valid location", preferredStyle: .Alert)
+            
+            //Create and add the Cancel action
+            let cancelAction: UIAlertAction = UIAlertAction(title: "OK", style: .Cancel) { action -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            //alert.view.setNeedsLayout()
+            alert.addAction(cancelAction)
+                    self.presentViewController(alert, animated: true, completion: nil)})
+            }
+            
+            print("not a valid location")
+            return true
+        }
+        return false
+
     }
     func timer()
     {
